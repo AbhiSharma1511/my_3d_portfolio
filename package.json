@@ -9,9 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^10.0.8",
+    "@react-three/fiber": "^9.1.2",
+    "emailjs-com": "^3.2.0",
+    "framer-motion": "^12.14.0",
+    "maath": "^0.10.8",
+    "next": "15.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.2"
+    "react-tilt": "^1.0.2",
+    "react-vertical-timeline-component": "^3.5.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

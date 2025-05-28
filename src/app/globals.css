@@ -4,6 +4,12 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+/* In globals.css or a global Tailwind file */
+.violet-gradient {
+  background: linear-gradient(180deg, #8e2de2, #4a00e0, #000); /* ends in black */
+}
+
+
 
 @theme inline {
   --color-background: var(--background);
