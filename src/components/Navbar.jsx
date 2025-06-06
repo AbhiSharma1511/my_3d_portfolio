@@ -29,7 +29,7 @@ const Navbar = () => {
     }, [isMenuOpen]);
 
     return (
-        <div className="absolute bg-transparent z-10 w-full">
+        <div className="fixed bg-transparent z-10 w-full">
             {/* Navbar Container */}
             <div className="flex justify-between items-center py-2 px-5 md:px-10">
                 {/* Logo */}
@@ -45,7 +45,7 @@ const Navbar = () => {
                 {/* Desktop Nav Links */}
                 <div className="hidden md:flex px-3 py-1 gap-10 text-white font-semibold">
                     <Link href="/" className="mx-5 hover:text-blue-400 transition text-lg">Home</Link>
-                    <Link href="/#about-us" className="mx-5 hover:text-blue-400 transition text-lg">About Us</Link>
+                    <Link href="/#about" className="mx-5 hover:text-blue-400 transition text-lg">About Us</Link>
                     <Link href="/#work" className="mx-5 hover:text-blue-400 transition text-lg">Work</Link>
                     <Link href="/#service" className="mx-5 hover:text-blue-400 transition text-lg">Contact</Link>
                 </div>

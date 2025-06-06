@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { ComputersCanvas } from "./(pages)/canvas";
 import herobg from "../../public/assets/herobg.png"
 import About from "./(pages)/About";
+import Experience from "./(pages)/Experience";
 
 const Page = () => {
   return (
@@ -25,7 +26,7 @@ const Page = () => {
       <ComputersCanvas />
       <div className="absolute xs:bottom-10 bottom-5 w-full flex justify-center items-center">
         <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-gray-300 flex justify-center items-start">
             <motion.div
               animate={{ y: [5, 37, 5] }}
               transition={{
@@ -34,12 +35,12 @@ const Page = () => {
                 repeatType: "loop"
               }}
               className="w-3 h-3 rounded-full bg-gray-300">
-
             </motion.div>
           </div>
         </a>
       </div>
       <About/>
+      <Experience/>
     </section>
   );
 };
