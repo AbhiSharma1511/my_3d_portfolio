@@ -6,12 +6,15 @@ import { ComputersCanvas } from "./(pages)/canvas";
 import herobg from "../../public/assets/herobg.png"
 import About from "./(pages)/About";
 import Experience from "./(pages)/Experience";
+import Tech from "./(pages)/Tech";
+import Work from "./(pages)/Work";
+import Contact from "./(pages)/Contact";
 
 const Page = () => {
   return (
     <section
       className="relative w-full h-screen mx-auto bg-cover bg-center"
-      style={{ backgroundImage: `url('/assets/herobg.png')` }}
+      // style={{ backgroundImage: `url('/assets/herobg.png')` }}
     >
       <div className={`${styles.paddingX} absolute inset-0 top-[150px] max-w-7xl mx-auto flex flex-row item-start gap-5`}>
         <div className=" flex flex-col justify-start items-center">
@@ -41,6 +44,9 @@ const Page = () => {
       </div>
       <About/>
       <Experience/>
+      <Tech/>
+      <Work/>
+      <Contact/>
     </section>
   );
 };

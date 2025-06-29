@@ -1,3 +1,4 @@
+'use client'
 import { motion } from 'framer-motion'
 import React, { useState } from 'react'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
@@ -9,12 +10,12 @@ import { textVariant } from '@/utils/motion'
 
 const ExperienceCard = ({ experience }) => {
 
-  const [elementClicked, setElementClicked] = useState(false)
-  
+  const [elementClicked, setElementClicked] = useState(true)
+
   return (
     <VerticalTimelineElement contentStyle={{ background: '#1d1836', color: '#fff' }}
       date={experience.date}
-      contentArrowStyle={{ borderRight: '7px solid #232631'}}
+      contentArrowStyle={{ borderRight: '7px solid #232631' }}
       iconStyle={{ background: experience.iconBg }}
       onTimelineElementClick={
         () => {
@@ -41,9 +42,14 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`&{styles.sectionSubText} text-white`}>Whta I have done so far</p>
-        <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+      <motion.div
+        variants={textVariant(0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        onViewportEnter={() => console.log("Text is now visible")}>
+        <p className={`&{styles.sectionSubText} text-white`}>What I have done so far</p>
+        <h2 className={`text-lg text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]`}>Work Experience.</h2>
       </motion.div>
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline>

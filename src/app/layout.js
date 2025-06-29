@@ -22,9 +22,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative bg-black`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative bg-black bg-fixed bg-center bg-cover bg-no-repeat`}
+        style={{ backgroundImage: `url('/assets/herobg.png')` }}
       >
-        <Navbar/>
+        <Navbar />
         {children}
       </body>
     </html>
